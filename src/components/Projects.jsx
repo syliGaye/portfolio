@@ -24,12 +24,15 @@ const Projects = (props) => {
   const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
-    fetch(endpoints.projects, {
+    fetch(`${process.env.PUBLIC_URL}/${endpoints.projects}`, {
       method: 'GET',
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('Fichier non trouvé');
+        return res.json();
+      })
       .then((res) => setData(res))
-      .catch((err) => err);
+      .catch((err) => console.error('Erreur Fetch:', err));
   }, []);
   const numberOfItems = showMore && data ? data.length : 6;
   return (

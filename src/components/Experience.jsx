@@ -36,12 +36,15 @@ function Experience(props) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(endpoints.experiences, {
+    fetch(`${process.env.PUBLIC_URL}/${endpoints.experiences}`, {
       method: 'GET',
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('Fichier non trouvé');
+        return res.json();
+      })
       .then((res) => setData(res.experiences))
-      .catch((err) => err);
+      .catch((err) => console.error('Erreur Fetch:', err));
   }, []);
 
   return (

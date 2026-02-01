@@ -17,12 +17,15 @@ function Education(props) {
   const [mode, setMode] = useState('VERTICAL_ALTERNATING');
 
   useEffect(() => {
-    fetch(endpoints.education, {
+    fetch(`${process.env.PUBLIC_URL}/${endpoints.education}`, {
       method: 'GET',
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('Fichier non trouvé');
+        return res.json();
+      })
       .then((res) => setData(res))
-      .catch((err) => err);
+      .catch((err) => console.error('Erreur Fetch:', err));
 
     if (window?.innerWidth < 576) {
       setMode('VERTICAL');

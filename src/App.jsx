@@ -18,7 +18,8 @@ function App() {
       <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
         <GlobalStyles />
         <div className="App">
-          <BrowserRouter>
+          {/* AJOUTEZ LE BASENAME ICI */}
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <MainApp />
           </BrowserRouter>
         </div>
