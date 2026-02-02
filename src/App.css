@@ -142,6 +142,16 @@ section.timeline-card-content div.card-description > p {
   }
 }
 
+@media (max-width: 768px) {
+
+  .intro-image-journal {
+    float: none !important;
+    display: block;
+    margin: 0 auto 20px auto !important;
+    max-width: 100% !important;
+  }
+}
+
 .header {
   font-size: 3em;
   font-weight: bold;

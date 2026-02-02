@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 import Header from './Header';
@@ -10,29 +10,22 @@ import FallbackSpinner from './FallbackSpinner';
 const styles = {
   introTextContainer: {
     margin: 10,
-    flexDirection: 'column',
-    whiteSpace: 'pre-wrap',
     textAlign: 'left',
     fontSize: '1.2em',
     fontWeight: 500,
+    lineHeight: '1.6', // Améliore la lisibilité pour l'effet journal
   },
   introImageContainer: {
-    margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    display: 'flex',
+    float: 'right', // Fait flotter l'image à droite (ou 'left' selon votre choix)
+    marginLeft: '20px', // Espace entre le texte et l'image
+    marginBottom: '10px',
+    maxWidth: '300px', // Ajustez la taille selon vos besoins
   },
 };
 
 function About(props) {
   const { header } = props;
   const [data, setData] = useState(null);
-
-  const parseIntro = (text) => (
-    <ReactMarkdown
-      children={text}
-    />
-  );
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/${endpoints.about}`, {
@@ -51,20 +44,23 @@ function About(props) {
       <Header title={header} />
       <div className="section-content-container">
         <Container>
-          {data
-            ? (
-              <Fade>
-                <Row>
-                  <Col style={styles.introTextContainer}>
-                    {parseIntro(data.about)}
-                  </Col>
-                  <Col style={styles.introImageContainer}>
-                    <img src={data?.imageSource} alt="profile" />
-                  </Col>
-                </Row>
-              </Fade>
-            )
-            : <FallbackSpinner />}
+          {data ? (
+            <Fade>
+              {/* On retire Row et Col pour laisser le flux HTML naturel */}
+              <div style={styles.introTextContainer}>
+                <div style={styles.introImageContainer} className="intro-image-journal">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/${data.imageSource}`}
+                    alt="profile"
+                    style={{ width: '100%', borderRadius: '10px' }}
+                  />
+                </div>
+                <ReactMarkdown children={data.about} />
+              </div>
+            </Fade>
+          ) : (
+            <FallbackSpinner />
+          )}
         </Container>
       </div>
     </>
