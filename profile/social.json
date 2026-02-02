@@ -2,15 +2,19 @@
     "social": [
         {
             "network" : "linkedin",
-            "href": "https://linkedin.com/"
+            "href": "https://www.linkedin.com/in/sylvestre-gaye-b6565a144/"
         },
         {
             "network" : "github",
-            "href": "https://github.com/mayankagarwal09"
+            "href": "https://github.com/syliGaye"
+        },
+        {
+            "network" : "gitlab",
+            "href": "https://gitlab.com/sylgaye"
         },
         {
             "network" : "email",
-            "href": "mailto:test@test.com"
+            "href": "mailto:sylvestregaye@gmail.com"
         }
     ]
 }
