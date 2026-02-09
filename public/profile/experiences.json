@@ -1,33 +1,45 @@
 {
     "experiences": [
         {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Full-time",
+            "title": "Développeur Web & Python",
+            "subtitle": "Laboratoire de Traitement du Signal et de l'Image (LTSI INSERM)",
+            "workType": "Stage",
             "workDescription": [
-                "Integrated **2** new product.",
-                "Worked on adding **def** to **bcd**. Improved speed by 50%."
+                "Développement d'un système d'aide à la décision en médecine (Decision Support System - DSS).",
+                "Réalisation de PoC d’un système de collecte de données cliniques."
             ],
-            "dateText": "06/20XX – Present"
+            "dateText": "05/2024 – 10/2025"
         },
         {
-            "title": "Software Engineer",
-            "subtitle": "XYZ Ltd",
-            "workType": "Internship",
+            "title": "Ingénieur Étude & Développement",
+            "subtitle": "DIGIT-A.L.",
+            "workType": "Temps plein",
             "workDescription": [
-                "Worked on abc."
+                "Conception et réalisation d’une plateforme de gestion pour les microfinances.",
+                "Conception, développement et supervision d'une solution de gestion de la relation client.",
+                "Conception, réalisation et déploiement d'une application de gestion de courtage en assurance",
+                "Maintenance et mise à jour des contenus d’un site de promotion immobilière."
             ],
-            "dateText": "01/20XX – 05/20XX"
+            "dateText": "05/2020 – 08/2023"
         },
         {
-            "title": "App Developer",
-            "subtitle": "ABC Pvt Ltd",
+            "title": "Data Consulting Group",
+            "subtitle": "Consultant SI",
+            "workType": "Temps plein",
+            "workDescription": [
+                "Conception et mise en œuvre de stratégie intégrée de gouvernance du système d'information et de transformation digitale.",
+                "Élaboration de schéma directeur du système d'information."
+            ],
+            "dateText": "11/2015 – 04/2020"
+        },
+        {
+            "title": "Développeur Java (Back-end)",
+            "subtitle": "DIGIT-A.L.",
             "workType": "Freelance",
             "workDescription": [
-                "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
-                "Done bcd work."
+                "Réalisation et déploiement d’un espace client/salarié pour la gestion des ressources humaines."
             ],
-            "dateText": "09/20XX – 01/20YY"
+            "dateText": "09/2023 – 07/2025"
         }
     ]
 }

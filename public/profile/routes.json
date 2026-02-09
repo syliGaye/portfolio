@@ -11,11 +11,6 @@
             "headerTitle": "Compétences"
         },
         {
-            "component": "Education",
-            "path": "/education",
-            "headerTitle": "Formation"
-        },
-        {
             "component": "Experience",
             "path": "/experience",
             "headerTitle": "Experiences Professionnelles"
